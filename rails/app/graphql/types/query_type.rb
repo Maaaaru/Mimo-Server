@@ -9,5 +9,10 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :posts, [Types::PostType], null: false
+    def posts
+      Post.all
+    end
   end
 end
